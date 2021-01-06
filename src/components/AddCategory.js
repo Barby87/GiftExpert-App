@@ -8,11 +8,12 @@ const AddCategory = ({ setCategories }) => {
     const handleInputChange = (e) => {
         // Actualizar inputValue con el último valor actualizado con lo que la persona escribió en el input
         setInputValue(e.target.value)
+        console.log('handleInputChange llamado')
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Submit');
+        console.log('Submit', inputValue);
 
         // Método trim borra espacios en blanco que puedan haber en el input
         if( inputValue.trim().length > 2 ) {
